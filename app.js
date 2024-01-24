@@ -14,8 +14,6 @@ function insertarElemento(elemento, texto){
 function generarNumero(){
     let numeroGenerados = Math.floor(Math.random()*numeroMaximo)+1;
     // si el numero generado esta incluido en la lista
-    console.log(numeroGenerados);
-    console.log(listaNumeros);
     if(listaNumeros.length == numeroMaximo){
         insertarElemento("p","Ya se sortearon todos los números posbibles")
     }else{ 
@@ -32,7 +30,6 @@ function generarNumero(){
 function verificarIntento(){
     let numeroDeUsuario = parseInt(document.getElementById("numberUser").value);
     
-    console.log(intentos);
     if(numeroDeUsuario === numeroSecreto){
         insertarElemento("p", ` Acertaste el Número,  ${intentos} ${intentos === 1 ? "vez" : "veces"}`);
         document.getElementById("reiniciar").removeAttribute("disabled")
@@ -71,4 +68,3 @@ function condicionesIniciales() {
     intentos = 1;
 }
 condicionesIniciales();
-console.log(numeroSecreto);
